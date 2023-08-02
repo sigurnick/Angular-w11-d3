@@ -1,0 +1,40 @@
+<form (ngSubmit)="submit(form)" #form="ngForm"
+class="container mx-auto bg-white rounded-lg shadow-lg p-5 mt-32 flex justify-center">
+
+ <!-- email -->
+ <div>
+  <label for="email" class="font-bold mb-1 block">Inserisci Email</label>
+  <input
+    type="email"
+    name="email"
+    placeholder="Email"
+    class="border-2 rounded-lg p-1"
+    required
+    #email="ngModel"
+    ngModel
+  />
+</div>
+
+ <!-- password -->
+ <div class="ml-2">
+  <label for="password" class="font-bold mb-1 block">Inserisci Password</label>
+  <input
+    type="password"
+    name="password"
+    placeholder="*******"
+    class="border-2 rounded-lg p-1"
+    required
+    #passworde="ngModel"
+    ngModel
+  />
+</div>
+
+<!-- button -->
+<div class="ml-2">
+
+  <button class="mt-6 w-full bg-gray-800 py-2 px-4 text-white rounded-lg">Invia</button>
+</div>
+
+
+
+</form>

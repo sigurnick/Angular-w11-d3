@@ -1,0 +1,181 @@
+<form
+  [formGroup]="form"
+  class="container mx-auto bg-white rounded-lg shadow-lg p-5 mt-32 flex justify-center"
+>
+  <div>
+    <div class="flex gap-2">
+      <!-- ------------------[Input Form]------------------ -->
+      <!-- ---------nome -->
+      <div>
+        <label for="name" class="font-bold mb-1 block">Inserisci Nome</label>
+        <input
+          class="border-2 rounded-lg p-1"
+          type="text"
+          formControlName="name"
+          placeholder="Nome"
+        />
+      </div>
+      <!-- --------cognome -->
+      <div>
+        <label for="name" class="font-bold mb-1 block">Inserisci Cognome</label>
+        <input
+          type="text"
+          formControlName="surname"
+          placeholder="Cognome"
+          class="border-2 rounded-lg p-1
+        "
+        />
+      </div>
+    </div>
+
+
+    <div>
+      <!-- -----------email -->
+    <div class="mt-3">
+      <label for="email" class="font-bold mb-1 block"
+        >Inserisci email</label
+      >
+      <input
+        type="email"
+        formControlName="email"
+        placeholder="Email"
+        class="border-2 rounded-lg p-1 w-full"
+      />
+    </div>
+    </div>
+
+    <div class="flex gap-2 mt-3">
+      <div>
+        <!-- -----------password -->
+        <label for="name" class="font-bold mb-1 block"
+          >Inserisci Password</label
+        >
+        <input
+          type="password"
+          formControlName="password"
+          placeholder="**********"
+          class="border-2 rounded-lg p-1"
+        />
+      </div>
+
+      <div>
+        <!-- -----------conferma password -->
+        <label for="name" class="font-bold mb-1 block">Conferma Password</label>
+        <input
+          type="password"
+          formControlName="confPassword"
+          placeholder="**********"
+          class="border-2 rounded-lg p-1"
+        />
+      </div>
+    </div>
+
+    <div class="mt-3">
+      <div>
+        <!-- ---------------genere -->
+        <label for="gender" class="font-bold mb-1 block"
+          >Gender
+          <span class="font-light text-gray-600">(Optional)</span></label
+        >
+        <select formControlName="gender" class="border-2 rounded-lg p-1 w-full">
+          <option selected="" value="uomo">Uomo</option>
+          <option value="donna">Donna</option>
+        </select>
+      </div>
+
+      <div class="mt-3">
+        <!-- --------------immagine profilo -->
+        <label for="profilePhoto" class="font-bold mb-1 block"
+          >Inserisci foto profilo
+          <span class="font-light text-gray-600">(Optional)</span></label
+        >
+        <input
+          type="text"
+          formControlName="profilePhoto"
+          class="border-2 rounded-lg p-1 w-full"
+        />
+      </div>
+    </div>
+
+    <!-- -----------------biografia -->
+    <div class="mt-3">
+      <label for="biography" class="font-bold mb-1 block"
+        >Inserisci biografia
+        <span class="font-light text-gray-600">(Optional)</span></label
+      >
+      <input
+        type="text"
+        formControlName="biography"
+        placeholder="Biography"
+        class="border-2 rounded-lg p-1 w-full"
+      />
+    </div>
+
+    <!-- -----------username -->
+    <div class="mt-3">
+      <label for="username" class="font-bold mb-1 block"
+        >Inserisci username</label
+      >
+      <input
+        type="text"
+        formControlName="username"
+        placeholder="Username"
+        class="border-2 rounded-lg p-1 w-full"
+      />
+    </div>
+
+    <!-- --------------------[Validation]---------------------- -->
+    <!-- validazione nome -->
+    <div
+      class="mt-5 bg-amber-600 text-white p-1 rounded-sm"
+      *ngIf="!isValid('name') && isTouched('name')"
+    >
+      Inserisci Nome
+    </div>
+
+    <!-- validazione cognnome -->
+    <div
+      class="mt-1 bg-amber-600 text-white p-1 rounded-sm"
+      *ngIf="!isValid('surname') && isTouched('surname')"
+    >
+      Inserisci Cognome
+    </div>
+
+    <!-- validazione password -->
+    <div
+      class="mt-1 bg-amber-600 text-white p-1 rounded-sm"
+      *ngIf="!isValid('password') && isTouched('password')"
+    >
+      Inserisci Password
+    </div>
+
+     <!-- validazione email -->
+     <div
+     class="mt-1 bg-amber-600 text-white p-1 rounded-sm"
+     *ngIf="!isValid('email') && isTouched('email')"
+   >
+     Inserisci Email
+   </div>
+
+    <!-- validazione username -->
+    <div
+      class="mt-1 bg-amber-600 text-white p-1 rounded-sm"
+      *ngIf="!isValid('username') && isTouched('username')"
+    >
+      Inserisci Username
+    </div>
+    <!-- ------------------------------------------------------- -->
+
+    <!----------- bottone --------- -->
+    <div class="text-center">
+      <button
+        (click)="send()"
+        class="mt-6 w-full bg-gray-800 py-2 px-4 text-white rounded-lg"
+        [ngClass]="{ 'bg-gray-600': form.invalid }"
+        [disabled]="form.invalid"
+      >
+        Invia
+      </button>
+    </div>
+  </div>
+</form>

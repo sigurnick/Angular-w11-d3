@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "email": "jykudosu@mailinator.com",
+      "password": "$2a$10$R1H8pNsV0.9Ym6EMzilCG.tdw7px2f0ChHNzzm0KAEGi7xnGgmQve",
+      "name": "Obcaecati lorem libe",
+      "surname": "Quia accusamus porro",
+      "confPassword": "password",
+      "gender": "uomo",
+      "profilePhoto": null,
+      "biography": "Nisi cupidatat tempo",
+      "username": "Sunt aute eligendi a",
+      "id": 1
+    },
+    {
+      "email": "dexter@gmail.com",
+      "password": "$2a$10$uqKOPCuv9Yf62zs7rki1Ye6M8OVElzloNjiDwvslOLbKagvW4HvYe",
+      "name": "dexter",
+      "surname": "dexter",
+      "confPassword": "password",
+      "gender": "uomo",
+      "profilePhoto": "https://static.wikia.nocookie.net/jakanddaxter/images/3/36/Daxter_from_Jak_II_concept_art.png/revision/latest/scale-to-width-down/490?cb=20150216234740",
+      "biography": "aaa",
+      "username": "dexter",
+      "id": 2
+    },
+    {
+      "email": "xocix@mailinator.com",
+      "password": "$2a$10$ou8oCfWDllzCBMhAkwrTku1nRisxyzuez.Nqh0p/dIiDQSFmr73K6",
+      "name": "Cillum at nisi rerum",
+      "surname": "Qui sunt cillum aut ",
+      "confPassword": "password",
+      "gender": "donna",
+      "profilePhoto": "Autem nihil mollitia",
+      "biography": "Sunt earum aut fugia",
+      "username": "In consectetur volu",
+      "id": 3
+    }
+  ]
+}
