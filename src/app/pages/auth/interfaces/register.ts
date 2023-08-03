@@ -7,7 +7,8 @@ export interface IRegister {
   gender:string,
   biography:string,
   username:string,
-  profilePhoto:string
+  profilePhoto:string,
+  casata?:string
 
 
 }

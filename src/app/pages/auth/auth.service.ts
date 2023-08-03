@@ -89,4 +89,12 @@ export class AuthService {
     //se nessun return viene eseguito proseguo
     this.authSubject.next(accessData);//invio i dati dell'utente al behaviorsubject
   }
+
+
+  //recupero tutti gli utenti
+  getAllUsers() {
+
+    return this.http.get('http://localhost:3000/users')
+
+  }
 }

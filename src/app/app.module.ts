@@ -11,6 +11,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { UsersComponent } from './pages/users/users.component';
+import { GreenalertComponent } from './components/greenalert/greenalert.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ProfileComponent } from './pages/profile/profile.component';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    UsersComponent,
+    GreenalertComponent
   ],
   imports: [
     BrowserModule,

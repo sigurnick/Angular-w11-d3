@@ -6,6 +6,7 @@ export interface IUser {
   biography:string,
   username:string,
   profilePhoto:string,
-  id:number
+  id:number,
+  casata?:string
 
 }

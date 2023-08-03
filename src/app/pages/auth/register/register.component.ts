@@ -32,6 +32,7 @@ export class RegisterComponent {
 
         name: this.fb.control(null, [Validators.required]), // <-- nelle () inseriamo il valore di default seguito da un array di validatori
         surname: this.fb.control(null, [Validators.required]),
+        casata: this.fb.control(null),
         password: this.fb.control(null, [Validators.required]),
         confPassword: this.fb.control(null, [Validators.required]),
         gender: this.fb.control(null),

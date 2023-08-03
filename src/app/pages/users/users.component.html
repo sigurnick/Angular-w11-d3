@@ -1,0 +1,66 @@
+<div class="container mx-auto grid gap-5 grid-cols-1  p-5">
+
+  <!-- cards -->
+  <div *ngFor="let user of allUsers">
+
+
+    <div class="flex items-center justify-between  w-full h-full gap-12 bg-white rounded-lg shadow-lg p-5">
+
+
+      <div >
+
+        <!-- photo profile e text -->
+        <div class="flex items-center gap-4">
+
+
+          <!-- photo -->
+          <img class="rounded-lg w-48 border-2 border-gray-800 lg:w-48" [src]="user.profilePhoto">
+
+
+          <!-- text info -->
+          <div class="flex flex-col gap-2">
+
+            <h4 class="text-xl"><span class="font-bold">Username: </span>{{user.username}}</h4>
+
+            <h4 class="text-xl"><span class="font-bold">Nome: </span>{{user.name}}</h4>
+
+            <h4 class="text-xl"><span class="font-bold">Casata: </span>{{user.casata}}</h4>
+          </div>
+        </div>
+      </div>
+
+
+
+<div>
+
+  <!-- casata -->
+  <div *ngIf = "user.casata == 'Grifondoro'">
+    <img class="w-28 rounded-lg"
+    src="https://i.pinimg.com/736x/9c/16/da/9c16da77fdd27d0e40cc19bd2b7b2511.jpg">
+  </div>
+
+  <div *ngIf = "user.casata == 'Serpeverde'">
+    <img class="w-28 rounded-lg"
+    src="https://i.pinimg.com/564x/1a/1a/5e/1a1a5eb0e80e931cc4f46ac1feba6cd5.jpg">
+  </div>
+
+  <div *ngIf = "user.casata == 'Corvonero'">
+    <img class="w-28 rounded-lg"
+    src="https://i.pinimg.com/564x/5e/04/ff/5e04ffb6439275fc7714df433b1a2c16.jpg">
+  </div>
+  <div *ngIf = "user.casata == 'Tassofrasso'">
+    <img class="w-28 rounded-lg"
+    src="https://i.pinimg.com/564x/4f/9e/ac/4f9eac3fd6bcd9f8290ee757c81bae7d.jpg">
+  </div>
+</div>
+
+
+
+    </div>
+
+
+  </div>
+
+</div>
+
+

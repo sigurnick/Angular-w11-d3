@@ -11,6 +11,7 @@ import { AuthService } from '../auth.service';
 export class LoginComponent {
 
   @ViewChild('form') form!: NgForm;
+  loginStatus!:boolean
 
   constructor(
     private authSvc:AuthService,
@@ -26,8 +27,11 @@ export class LoginComponent {
       let urlProfile:string = '/profile/' + data.user.id
       console.log(urlProfile);
 
+      this.loginStatus = true
 
-      this.router.navigate([urlProfile])
+      setTimeout(() => {
+        this.router.navigate([urlProfile])
+      },3000)
 
     })
   }

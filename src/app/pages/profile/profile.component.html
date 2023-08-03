@@ -1,6 +1,44 @@
-<div>
-  <div class="container">
+
+  <div class="container flex justify-center mt-16 mx-auto">
+
+    <div class="flex flex-col gap-3">
+
+      <img class="rounded-lg w-5/12 border-2 border-gray-800 mx-auto" [src]="user$.source._value.user.profilePhoto">
+
+      <div class="mt-12 mx-auto  bg-white rounded-lg shadow-md p-6">
+
+        <div>
+          <!-- casata -->
+      <div class="mb-3" *ngIf = "user$.source._value.user.casata == 'Grifondoro'">
+        <img class="w-32 rounded-lg"
+        src="https://i.pinimg.com/736x/9c/16/da/9c16da77fdd27d0e40cc19bd2b7b2511.jpg">
+      </div>
+
+      <div *ngIf = "user$.source._value.user.casata == 'Serpeverde'">
+        <img class="w-32 rounded-lg"
+        src="https://i.pinimg.com/564x/1a/1a/5e/1a1a5eb0e80e931cc4f46ac1feba6cd5.jpg">
+      </div>
+
+      <div *ngIf = "user$.source._value.user.casata == 'Corvonero'">
+        <img class="w-32 rounded-lg"
+        src="https://i.pinimg.com/564x/5e/04/ff/5e04ffb6439275fc7714df433b1a2c16.jpg">
+      </div>
+      <div *ngIf = "user$.source._value.user.casata == 'Tassofrasso'">
+        <img class="w-32 rounded-lg"
+        src="https://i.pinimg.com/564x/4f/9e/ac/4f9eac3fd6bcd9f8290ee757c81bae7d.jpg">
+      </div>
+        </div>
+
+        <h4 class="text-xl mb-5"><span class="font-bold">Nome:</span> {{user$.source._value.user.name}}</h4>
+        <h4 class="text-xl mb-5"><span class="font-bold">Cognome:</span> {{user$.source._value.user.surname}}</h4>
+        <h4 class="text-xl mb-5"><span class="font-bold">Sesso:</span> {{user$.source._value.user.gender}}</h4>
+        <h4 class="text-xl mb-5"><span class="font-bold">Username:</span> {{user$.source._value.user.username}}</h4>
+        <h4 class="text-xl mb-5"><span class="font-bold">Bio:</span> <span class="text-lg"> {{user$.source._value.user.biography}}</span></h4>
+
+      </div>
+
+    </div>
 
 
   </div>
-</div>
+

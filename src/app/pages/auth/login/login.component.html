@@ -1,4 +1,6 @@
-<form (ngSubmit)="submit(form)" #form="ngForm"
+<div class="position-relative">
+
+  <form (ngSubmit)="submit(form)" #form="ngForm"
 class="container mx-auto bg-white rounded-lg shadow-lg p-5 mt-32 flex justify-center">
 
  <!-- email -->
@@ -38,3 +40,15 @@ class="container mx-auto bg-white rounded-lg shadow-lg p-5 mt-32 flex justify-ce
 
 
 </form>
+
+
+<div *ngIf="loginStatus" class="fixed bottom-0">
+
+
+  <app-greenalert></app-greenalert>
+
+
+</div>
+
+
+</div>

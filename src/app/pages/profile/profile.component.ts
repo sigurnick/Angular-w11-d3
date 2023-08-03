@@ -1,5 +1,7 @@
-import { ActivatedRoute, Router } from '@angular/router';
 import { Component } from '@angular/core';
+import { AuthService } from '../auth/auth.service';
+import { IRegister } from '../auth/interfaces/register';
+import { Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-profile',
@@ -8,18 +10,40 @@ import { Component } from '@angular/core';
 })
 export class ProfileComponent {
 
-  id!: number;
+  user$!:any
+  private userSubscription!: Subscription
 
-  constructor(private route: ActivatedRoute){}
+  constructor(
+
+    private auth: AuthService){
+    }
 
   ngOnInit() {
 
-    this.route.paramMap.subscribe(params => {
-      this.id = + !params.get('id');
-    });
+     this.auth.restoreUser()
 
-    console.log(this.id);
+   this.user$ = this.auth.user$
+   console.log(this.user$);
+
+
+  //  this.auth.user$.subscribe((dati)=>{
+  //   this.user$ = dati?.user
+
+  //   console.log('dati',this.user$);
+
+  //  })
+
+
+// this.userSubscription = this.user$.subscribe((data)=>{
+
+// })
+
+
+
 
   }
+
+
+
 
 }
